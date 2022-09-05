@@ -10,6 +10,9 @@ $.prototype.on = function(eventName, callback){
     return this;
 };
 
+
+
+
 $.prototype.off = function(eventName, callback){
     if(!eventName || !callback){
         return this;

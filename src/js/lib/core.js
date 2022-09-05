@@ -31,6 +31,16 @@ $.prototype.init = function(selector){
     if(!selector){
         return this; // {} вернет пустой обьект
     }
+    // проверка является ли элемент тегом
+    if(selector.tagName){
+        this[0] = selector;
+        this.length =1;
+        return this;
+    }
+
+
+
+
     // в существующий обьект добавляем новые свойства
     Object.assign(this, document.querySelectorAll(selector));
     this.length = document.querySelectorAll(selector).length;

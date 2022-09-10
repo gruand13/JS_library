@@ -1,3 +1,4 @@
+import { devel } from 'jshint/src/vars';
 import './lib/lib';
 
 // $('button').on('click', function(){
@@ -45,3 +46,36 @@ import './lib/lib';
 // );
 
 // $('.dropdown-toggle').dropdown(); // вызов
+
+$('#trigger').click(()=>$('#trigger').createModal({
+    text: {
+        title: 'Modal title',
+        body: 'Lorem deve  dsgf gh hgf hggh h h gf gjff g j h ae r wqeeret  fdd g  hgh' 
+    },
+    btns: {
+        count: 3,
+        settings: [
+            [
+                'close',
+                ['btn-danger', 'mr-10'],
+                true
+            ],
+            [
+                'save changes',
+                ['btn-success'],
+                false,
+                ()=>{
+                    alert('Данные сохранены');
+                }
+            ],
+            [
+                'Another button',
+                ['btn-warning', 'ml-10'],
+                false,
+                ()=>{
+                    alert('Hello world');
+                }
+            ]
+        ]
+    }
+}));

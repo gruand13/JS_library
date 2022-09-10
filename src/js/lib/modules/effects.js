@@ -50,7 +50,7 @@ $.prototype.fadeOut = function(dur, fin){
 
             this[i].style.opacity = 1 - complection;
             if (complection === 1){
-            this[i].style.opacity = 'none';
+            this[i].style.display = 'none';
 
             }
         };
